@@ -2,12 +2,13 @@ package org.workshop.maven;
 
 import com.google.gson.Gson;
 import org.workshop.common.CourseInfo;
+import org.workshop.frontend.MyApplication;
 
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 public class Main {
-    static void main() {
+    static void main(String[] args) {
         IO.println("Hello and welcome!");
 
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
@@ -26,5 +27,8 @@ public class Main {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
+        // Launch JavaFX application
+        MyApplication.launch(MyApplication.class, args);
     }
 }
