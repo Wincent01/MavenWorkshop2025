@@ -7,4 +7,8 @@ public class CourseInfo {
     public String getCourse() { return course; }
 
     public int getYear() { return year; }
+
+    public void setCourse(String value) { course = value; }
+
+    public void setYear(int value) { year = value; }
 }
